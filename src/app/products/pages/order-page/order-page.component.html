@@ -1,0 +1,51 @@
+<p-panel header="Custom Order Pipe" class="p-1">
+  <!-- <p>CommonModule</p> -->
+</p-panel>
+
+<div class="grid">
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="isUpperCase ?">
+      <pre>original string: {{ sampleTest}}</pre>
+      <br>
+      <pre>isUpperCase: {{this.isUpperCase}}</pre>
+      <br>
+      <pre>{{ sampleTest|toggleCase: this.isUpperCase}}</pre>
+      <br>
+      <hr>
+      <br>
+      <p-button label="Toggle Case" icon="pi pi-search" class="mr-2"
+      (click)="toggleUpperCase()"></p-button>
+    </p-fieldset>
+  </div>
+</div>
+
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+      <p-button (onClick)="changeSort('name')" label="By Name" icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
+      <p-button (onClick)="changeSort('canFly')" label="Can Fly" icon="pi pi-check" styleClass="p-button-danger  mr-2"></p-button>
+      <p-button (onClick)="changeSort('color')" label="By Color" icon="pi pi-sort" styleClass="p-button-warning"></p-button>
+  </div>
+</p-toolbar>
+
+
+
+<p-table [value]="heroes| sortBy:sortByProperty:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Name</th>
+          <th>Can Fly</th>
+          <th>Color</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-hero>
+      <tr>
+          <td>{{ hero.name }}</td>
+          <td>
+            {{hero.canFly|canFly }}
+          </td>
+          <td>{{ hero.color|titlecase }}</td>
+      </tr>
+  </ng-template>
+</p-table>

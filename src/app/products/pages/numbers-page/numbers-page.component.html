@@ -1,0 +1,56 @@
+<p-panel header="Numbers Pipes" class="p-1">
+  <p>Pipes from CommonModule</p>
+  <hr/>
+  <p>Decimal Number: {{decimalNumber}}</p>
+  <p>Int Number: {{intNumber}}</p>
+  <p>Percent Number: {{percentNumber}}</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="number(default)">
+      <p>{{decimalNumber | number}}</p>
+      <p>{{intNumber | number}}</p>
+      <p>{{percentNumber | number}}</p>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="number: '1.2-2'">
+      <p>{{decimalNumber | number: "1.2-2"}}</p>
+      <p>{{intNumber | number: "1.2-2"}}</p>
+      <p>{{percentNumber | number: "1.2-2"}}</p>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="currency (default)">
+      <p>{{decimalNumber | currency}}</p>
+      <p>{{intNumber | currency}}</p>
+      <p>{{percentNumber | currency}}</p>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="currency:EUR':'symbol-narrow':'1.4-4'">
+      <p>{{decimalNumber | currency: "EUR":"symbol-narrow":"1.4-4"}}</p>
+      <p>{{intNumber | currency: "EUR":"symbol-narrow":"1.4-4"}}</p>
+      <p>{{percentNumber | currency: "EUR":"symbol-narrow":"1.4-4"}}</p>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="percent(default)">
+      <p>{{decimalNumber | percent}}</p>
+      <p>{{intNumber | percent}}</p>
+      <p>{{percentNumber | percent}}</p>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="percent:'1.2-2">
+      <p>{{decimalNumber | percent:"1.2-2"}}</p>
+      <p>{{intNumber | percent:"1.2-2"}}</p>
+      <p>{{percentNumber | percent:"1.2-2"}}</p>
+    </p-card>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+<p-panel header="Basics Pipes" class="p-1">
+  <p>Pipes from CommonModule</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="upperCase">
+      {{"ron" | uppercase}}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="lowerCase">
+      {{"RON" | lowercase}}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="titleCase">
+      {{"rON" | titlecase }}
+    </p-card>
+  </div>
+
+  <div class="col-12">
+    <p-card header="date">
+      <table>
+        <tr>
+          <th>
+            Format
+          </th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>
+            date
+          </td>
+          <td>
+            {{customDate}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date
+          </td>
+          <td>
+            {{customDate | date}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "short"
+          </td>
+          <td>
+            {{customDate | date: "short"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long"
+          </td>
+          <td>
+            {{customDate | date: "long"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "MMM"
+          </td>
+          <td>
+            {{customDate | date: "MMM"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "MMM dd, yyyy"
+          </td>
+          <td>
+            {{customDate | date: "MMM dd, yyyy"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long":"GMT-6"
+          </td>
+          <td>
+            {{customDate | date: "long":"GMT-6"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long":"GMT-4"
+          </td>
+          <td>
+            {{customDate | date: "long":"GMT-4"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long":"":"es-CO"
+          </td>
+          <td>
+            {{customDate | date: "long":"":"es-CO"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long":"":"es-MX"
+          </td>
+          <td>
+            {{customDate | date: "long":"":"es-MX"}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            date | date: "long":"":"fr-CA"
+          </td>
+          <td>
+            {{customDate | date: "long":"":"fr-CA"}}
+          </td>
+        </tr>
+      </table>
+    </p-card>
+  </div>
+</div>
